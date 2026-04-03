@@ -230,14 +230,14 @@
 <canvas id="preprocess-canvas" width="32" height="32"></canvas>
 
 <div class="container">
-    <h1>🧠 AlexNet CIFAR-10 Classifier</h1>
+    <h1>AlexNet CIFAR-10 Classifier</h1>
     <p class="subtitle">Upload an image (airplane, car, cat, etc.)</p>
 
-    <div id="model-status">⏳ Loading model, please wait...</div>
+    <div id="model-status">Loading model, please wait...</div>
 
     <div class="upload-area">
         <label for="imageInput" class="file-label">
-            📁 Choose Image (JPG / PNG)
+            Choose Image (JPG / PNG)
         </label>
         <input type="file" id="imageInput" accept="image/*">
 
@@ -323,11 +323,11 @@ async function loadModel() {
         model.predict(dummy).dispose();
         dummy.dispose();
 
-        modelStatus.textContent = '✅ Model ready — accuracy ~92% on CIFAR-10';
+        modelStatus.textContent = 'Model ready — accuracy ~92% on CIFAR-10';
         modelStatus.classList.add('ready');
         if (fileLoaded) predictBtn.disabled = false;
     } catch (e) {
-        modelStatus.textContent = '❌ Model failed to load. Run: python -m http.server 8000';
+        modelStatus.textContent = 'Model failed to load. Run: python -m http.server 8000';
         console.error(e);
     }
 }
@@ -413,7 +413,7 @@ predictBtn.addEventListener('click', async function() {
 
     } catch (error) {
         console.error('Error:', error);
-        resultsDiv.innerHTML = `<div class="error-msg">❌ Prediction failed: ${error.message}</div>`;
+        resultsDiv.innerHTML = `<div class="error-msg">Prediction failed: ${error.message}</div>`;
     }
 
     predictBtn.disabled = false;
