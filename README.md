@@ -113,7 +113,7 @@ http://localhost:8000
 
 ---
 
-## 🔁 Retrain & Reconvert (Optional)
+## Retrain & Reconvert (Optional)
 
 If you want to retrain the model from scratch:
 
